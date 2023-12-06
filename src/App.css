@@ -89,3 +89,6 @@ progress::-moz-progress-bar {
   padding: 4px;
   background-color: #fff;
 }
+.custom-shadow {
+  box-shadow: 0 16px 40px 0 rgb(143, 160, 193, 0.16);
+}

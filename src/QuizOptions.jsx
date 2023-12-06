@@ -6,7 +6,7 @@ import Button from "./Button";
 export default function QuizOptions() {
   return (
     <>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 w-full max-w-[564px]">
         <SelectChoice content={"23"}>
           <ChoiceIcon>A</ChoiceIcon>
         </SelectChoice>

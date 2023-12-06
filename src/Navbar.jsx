@@ -9,9 +9,15 @@ export default function Navbar() {
       <div className="flex items-center justify-between">
         <div className="w-5"></div>
         <div className="flex gap-2 justify-between items-center">
-          <img src={iconSunDark} className="w-[0.875rem] h-[0.875rem]" />
+          <img
+            src={iconSunDark}
+            className="w-[0.875rem] h-[0.875rem] md:w-[1.3125rem] md:h-[1.3125rem]"
+          />
           <SwitchButton />
-          <img src={iconMoonDark} className="w-[0.75rem] h-[0.75rem]" />
+          <img
+            src={iconMoonDark}
+            className="w-[0.75rem] h-[0.75rem] md:w-[1.125rem] md:h-[1.125rem]"
+          />
         </div>
       </div>
     </header>

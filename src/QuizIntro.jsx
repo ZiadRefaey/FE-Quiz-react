@@ -7,28 +7,32 @@ import QuizIcon from "./QuizIcon";
 export default function QuizIntro() {
   return (
     <>
-      <h1 className="text-darkNavy max-w-[18.5rem] text-custom-40 font-light mb-2 leading-tight">
-        Welcome to the <span className="font-bold">Frontend Quiz!</span>
-      </h1>
-      <p className="italic text-custom-14 text-grayNavy mb-10">
-        Pick a subject to get started.
-      </p>
-      <div className="flex flex-col gap-3">
-        <SelectChoice content={"HTML"}>
-          <QuizIcon bgColor={"lightOrange"} src={HTMLIcon} />
-        </SelectChoice>
+      <div className="xl:flex max-w-[1160px] xl:justify-between xl:items-start">
+        <div>
+          <h1 className="text-darkNavy max-w-[18.5rem] text-custom-40 md:text-custom-64 font-light mb-2 leading-tightest md:max-w-[30rem] md:mb-4 xl:mb-12">
+            Welcome to the <span className="font-bold">Frontend Quiz!</span>
+          </h1>
+          <p className="italic text-custom-14 md:text-custom-20 text-grayNavy mb-10">
+            Pick a subject to get started.
+          </p>
+        </div>
+        <div className="flex flex-col gap-3 md:gap-6 w-full max-w-[564px]">
+          <SelectChoice content={"HTML"}>
+            <QuizIcon src={HTMLIcon} bgColor={"#FFF1E9"} />
+          </SelectChoice>
 
-        <SelectChoice content={"CSS"}>
-          <QuizIcon src={CSSIcon} bgColor={"lightGreen"} />
-        </SelectChoice>
+          <SelectChoice content={"CSS"}>
+            <QuizIcon src={CSSIcon} bgColor={"#E0FDEF"} />
+          </SelectChoice>
 
-        <SelectChoice content={"JS"}>
-          <QuizIcon src={JSIcon} bgColor={"lightSky"} />
-        </SelectChoice>
+          <SelectChoice content={"JS"}>
+            <QuizIcon src={JSIcon} bgColor={"#EBF0FF"} />
+          </SelectChoice>
 
-        <SelectChoice content={"Accessability"}>
-          <QuizIcon src={AccessibilityIcon} bgColor={"lightPurple"} />
-        </SelectChoice>
+          <SelectChoice content={"Accessability"}>
+            <QuizIcon src={AccessibilityIcon} bgColor={"#F6E7FF"} />
+          </SelectChoice>
+        </div>
       </div>
     </>
   );
