@@ -4,15 +4,26 @@ import CSSIcon from "./assets/icon-css.svg";
 import AccessibilityIcon from "./assets/icon-accessibility.svg";
 import JSIcon from "./assets/icon-js.svg";
 import QuizIcon from "./QuizIcon";
+import { useContext } from "react";
+import { ThemeContext } from "./App";
 export default function QuizIntro() {
+  const darkTheme = useContext(ThemeContext);
   return (
     <>
-      <div className="xl:flex max-w-[1160px] xl:justify-between xl:items-start">
-        <div>
-          <h1 className="text-darkNavy max-w-[18.5rem] text-custom-40 md:text-custom-64 font-light mb-2 leading-tightest md:max-w-[30rem] md:mb-4 xl:mb-12">
+      <div className="flex flex-col items-center justify-start xl:flex-row max-w-[1160px] xl:justify-between xl:items-start w-full">
+        <div className="w-full max-w-[564px]">
+          <h1
+            className={`text-${
+              darkTheme ? "white" : "darkNavy"
+            } max-w-[18.5rem] text-custom-40 md:text-custom-64 font-light mb-2 leading-tightest md:max-w-[30rem] md:mb-4 xl:mb-12 transition-all duration-300`}
+          >
             Welcome to the <span className="font-bold">Frontend Quiz!</span>
           </h1>
-          <p className="italic text-custom-14 md:text-custom-20 text-grayNavy mb-10">
+          <p
+            className={`italic text-custom-14 md:text-custom-20 ${
+              darkTheme ? "text-lightBlue" : "text-grayNavy"
+            } mb-10 transition-all duration-300`}
+          >
             Pick a subject to get started.
           </p>
         </div>

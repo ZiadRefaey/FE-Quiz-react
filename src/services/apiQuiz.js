@@ -1,11 +1,13 @@
-export async function getQuiz() {
+export async function getQuiz(dispatch, subject) {
   try {
-    const res = await fetch("http://localhost:1028/quizzes/html");
+    const source = subject.toLowerCase();
+    dispatch({ type: "fetchData" });
+    const res = await fetch(`http://localhost:1028/quizzes/${source}`);
 
     if (!res.ok) throw new Error("Error");
 
     const data = await res.json();
-    console.log(data);
+    return data;
   } catch (err) {
     console.log(err);
   }
